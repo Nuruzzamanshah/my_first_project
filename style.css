@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+                /* ====================================
+                        header section css
+                ====================================  */
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    height: 90px;
+    align-items: center;
+}
+
+.navigation{
+    display: flex;
+}
+
+.navigation li{
+    list-style: none;
+    margin: 10px;
+}
+
+.container li a{
+    text-decoration: none;
+    color: #3A3A3A;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 13px 10px;
+    line-height: 24px;
+}
+
+.logo h2{
+    color: #3a3a3a;
+}
+
+.banner{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: calc(100vh - 90px);
+    /* min-height: 600px; */
+}
+
+.banner-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.banner-left h1{
+    font-size: 45px;
+    color: #3A3A3A;
+    font-weight: 700;
+}
+
+.banner-left p{
+    color: #3A3A3A;
+    font-size: 18px;
+    line-height: 1.4;
+    margin: 15px 0;
+    text-align: justify;
+}
+
+.banner-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner-right img{
+    width: 440px;
+    height: 414px;
+    background-color: #f5f6fa;
+    border-radius: 50%;
+}
+
+.btn{
+    background: #E02C6D;
+    border-radius: 41px;
+    width: 196px;
+    height: 44px;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-right: 425px;
+}
+
+
+                    /* ====================================
+                              css
+                    ====================================  */
+
+.banner-left{
+    animation: moveright 1s linear 1;
+    animation-delay: 1s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+}                  
+@keyframes moveright{
+    0%{
+        transform: translateX(-100px);
+        visibility: visible;
+    }
+    100%{
+        transform: translateX(0px);
+        visibility: visible;
+
+    }
+}
+
+.banner-right{
+    height: 90%;
+    position: absolute;
+    bottom: 0;
+    right: 160px;
+    animation: zoomin 1s linear 1;
+    animation-delay: 2s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+}
+
+@keyframes zoomin{
+    0%{
+        transform: scale(0.5);
+        visibility: visible;
+    }
+    100%{
+        transform: scale(1);
+        visibility: visible;
+    }
+}
+
+
+                        /* ====================================
+                                gallery css
+                        ====================================  */
+
+.containers{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 40;
+}
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+                        /* ====================================
+                                containers css
+                        ====================================  */
+.section-title h2{
+    font-size: 40px;
+    display: inline-block;
+    margin: 130px 0;
+}
+.section-title{
+    text-align: center;
+}
+
+.gallery-titles{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+.photos{
+    border: 15px solid #EEEDE7;
+    box-shadow: 30 30px 35px rgba(0, 0, 0, .1);
+    border-radius: 5px;
+    object-fit: cover;
+
+}
